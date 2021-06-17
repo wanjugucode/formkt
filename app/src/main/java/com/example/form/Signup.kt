@@ -10,6 +10,8 @@ import android.widget.Spinner
 class Signup : AppCompatActivity() {
 
     lateinit var btnPreviousLbl:Button
+    lateinit var btnLogin:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -22,6 +24,7 @@ class Signup : AppCompatActivity() {
             var intent = Intent(baseContext, MainActivity::class.java)
             startActivity(intent)
         }
+
        val gender= arrayOf("Male","Female")
        val adapter=ArrayAdapter<String>(baseContext,android.R.layout.simple_spinner_item, gender)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
